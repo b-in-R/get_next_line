@@ -8,10 +8,15 @@
 # endif
 
 # include <stdio.h> //
+# include <fcntl.h> //
 # include <unistd.h>
 # include <stdlib.h>
 
 char	*get_next_line(int fd);
-
+size_t	ft_strlen(const char *s);
+void	*ft_memset(void *b, int c, size_t len);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
