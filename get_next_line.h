@@ -12,6 +12,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+// Debug PL
+# define PL printf("file: %s | line: %d | func: %s\n", __FILE__, __LINE__, __func__);
+
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);

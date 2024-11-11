@@ -1,4 +1,4 @@
-// HEADER
+
 
 #include "get_next_line.h"
 
@@ -122,7 +122,7 @@ int	main(int ac, char **av)
 		line = get_next_line(fd);
 		if (line == NULL)
 			break;
-		printf("%s", line);
+		printf(">> %s", line);
 		free(line);
 		getchar();
 	}
