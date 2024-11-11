@@ -36,7 +36,7 @@ char	*ft_line(char *buffer)
 		i++;
 	line = ft_calloc(i + 2, sizeof(char));
 	if (!line)
-		return 0;
+		return (NULL);
 	i = 0;
 	while (buffer[i] && buffer[i] != '\n')
 	{
@@ -76,7 +76,7 @@ char	*read_file(int fd, char *res)
 		buffer[n_read] = '\0';
 		res = ft_join(res, buffer);
 		if (ft_strchr(buffer, '\n'))
-			break;
+			break ;
 	}
 	free (buffer);
 	return (res);
@@ -85,7 +85,7 @@ char	*read_file(int fd, char *res)
 char	*get_next_line(int fd)
 {
 	static char	*buffer;
-	char	*line;
+	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);

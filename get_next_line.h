@@ -7,13 +7,10 @@
 #  define BUFFER_SIZE 10
 # endif
 
-# include <stdio.h> //
-# include <fcntl.h> //
+# include <stdio.h> // pour printf
+# include <fcntl.h> // pour open O_RDONLY
 # include <unistd.h>
 # include <stdlib.h>
-
-// Debug PL
-# define PL printf("file: %s | line: %d | func: %s\n", __FILE__, __LINE__, __func__);
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
