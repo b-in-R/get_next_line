@@ -107,7 +107,7 @@ char	*get_next_line(int fd)
 	buffer = ft_next(buffer);
 	return (line);
 }
-/*
+
 int	main(int ac, char **av)
 {
 	int	fd;
@@ -139,4 +139,4 @@ int	main(int ac, char **av)
 	close(fd);
 	return 0;
 }
-*/
+
