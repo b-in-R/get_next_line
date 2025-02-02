@@ -54,6 +54,11 @@ char	*ft_line(char *buffer)
 		line[i] = buffer[i];
 		i++;
 	}
+	if (buffer[i] == '\n')
+	{
+		line[i] = '\n';
+		i++;
+	}
 	line[i] = '\0';
 	return (line);
 }
@@ -108,6 +113,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
+/*
 int	main(int ac, char **av)
 {
 	int	fd;
@@ -131,12 +137,11 @@ int	main(int ac, char **av)
 	{
 		line = get_next_line(fd);
 		if (line == NULL)
-			break;
+			break ;
 		printf(">> %s", line);
 		free(line);
-		getchar();
 	}
 	close(fd);
 	return 0;
 }
-
+*/
