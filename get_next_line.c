@@ -113,6 +113,23 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
+/*		//	pour bonus - a voir si autre chose a modifier	//
+char	*get_next_line(int fd)
+{
+	static char	*buffer[1024];
+	char		*line;
+
+	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+		return (NULL);
+	buffer[fd] = read_file(fd, buffer[fd]);
+	if (!buffer[fd])
+		return (NULL);
+	line = ft_line(buffer[fd]);
+	buffer[fd] = ft_next(buffer[fd]);
+	return (line);
+}
+*/
+
 /*
 int	main(int ac, char **av)
 {
